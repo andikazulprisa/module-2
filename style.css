@@ -141,18 +141,37 @@ main {
 
 .card {
     overflow: hidden;
-    border-radius: 8px;
-    transition: transform 0.3s;
+    max-width: 200px;
+    position: relative;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.10);
 }
 
 .card img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4 ease;
+}
+
+.card:hover .title-overlay {
+    opacity: 1;
 }
 
 @media (max-width: 700px) {
