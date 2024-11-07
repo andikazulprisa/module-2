@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAPILEM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">KAPILEM</a>
+            </div>    
+            <ul class="nav-links">
+                <li><a href="#series">Series</a></li>
+                <li><a href="#film">Film</a></li>
+                <li><a href="#mylist">My List</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <button class="search-button">Go</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section id="series" class="content">
+                <h1>SERIES</h1>
+                <div class="grid">
+                    <div class="card">
+                        <img src="assets/img/breaking bad.jpg" alt="series 1">
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/theboys.jpg" alt="series 2">
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/GoT.jpg" alt="series 3">
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/op.jpg" alt="series 4">
+                    </div>
+                </div>
+            </section>
+            <section id="film" class="content">
+                <h1>FILM</h1>
+                <div class="grid">
+                    <div class="card">
+                        <img src="assets/img/instastellar.jpg" alt="film 1">
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/tlotr.jpg" alt="film 2">
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/avatar.jpg" alt="film 3">
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/kiminonawa.jpg" alt="film 4">
+                    </div>
+                </div>
+            </section>
+            <section id="mylist" class="content">
+                <h1>MY LIST</h1>
+                <div class="grid">
+                    <div class="card">
+                        <img src="assets/img/op.jpg" alt="mylist 1">
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/mcu.jpg" alt="mylist 2">
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/gintama.jpg" alt="mylist 3">
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/breaking bad.jpg" alt="mylist 4">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <h2>Filter</h2>
+            <form>
+                <div class="group">
+                    <h3>Genre</h3>
+                    <label><input type="checkbox" name="genre" value="action"> Action</label><br>
+                    <label><input type="checkbox" name="genre" value="comedy"> Comedy</label><br>
+                    <label><input type="checkbox" name="genre" value="animation"> Animation</label>
+                </div>
+
+                <div class="group">
+                    <h3>Quality</h3>
+                    <label><input type="radio" name="quality" value="SD"> SD</label><br>
+                    <label><input type="radio" name="quality" value="HD"> HD</label><br>
+                    <label><input type="radio" name="quality" value="4K"> 4K</label>
+                </div>
+
+                <div class="group">
+                    <h3>Sort By</h3>
+                    <select name="Sort">
+                        <option value="latest">Latest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="popular">Popular</option>
+                    </select>
+                </div>
+
+                <button type="submit">Filter</button>
+            </form>
+        </aside>
+    </div> 
+</body>
+
+<footer>
+    <p>&copy; 2024 KAPILEM. All rights reserved.</p>
+</footer>
+</html>
