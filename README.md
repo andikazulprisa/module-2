@@ -3,7 +3,7 @@
 KAPILEM adalah sebuah website katalog series dan film sederhana yang dibuat menggunakan HTML dan CSS.
 
 ### Link Website
-[KAPILEM](https://andikazulprisa.github.io/Deploy-module-1/)
+[KAPILEM](https://revou-fsse-oct24.github.io/module-2-andikazulprisa/)
 
 ### Screenshot Website 
 ![Screenshot](/assets/img/ss1.png)
