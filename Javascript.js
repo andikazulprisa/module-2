@@ -1,5 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector(".hamburger").addEventListener("click", function() {
-        document.querySelector(".navbar").classList.toggle("active");
-    });
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
 });

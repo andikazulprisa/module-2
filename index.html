@@ -4,169 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAPILEM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="/">KAPILEM</a>
-            </div>    
-            <ul class="nav-links">
-                <li><a href="#series">Series</a></li>
-                <li><a href="#film">Film</a></li>
-                <li><a href="#mylist">My List</a></li>
+        <nav class="fixed top-0 w-full bg-gray-800 bg-opacity-80 shadow-md text-white flex items-center justify-between px-5 py-3 z-10">
+            <div class="text-2xl font-bold">
+                <a href="/" class="hover:text-blue-400">KAPILEM</a>
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#western" class="hover:text-blue-400">Western</a></li>
+                <li><a href="#anime" class="hover:text-blue-400">Anime</a></li>
+                <li><a href="#mylist" class="hover:text-blue-400">My List</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>    
-            <div class="search-box">
-                <input type="text" placeholder="Search">
-                <button class="search-button">Go</button>
+            <div class="hidden md:flex items-center space-x-2">
+                <input type="text" placeholder="Search" class="px-3 py-1 rounded-l border border-gray-600 bg-gray-700 text-white placeholder-gray-400 focus:outline-none">
+                <button class="px-3 py-1 bg-blue-500 hover:bg-blue-600 rounded-r">Go</button>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="hamburger" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </nav>
+        <div id="mobileMenu" class="hidden md:hidden flex flex-col bg-gray-800 p-5 space-y-3">
+            <a href="#western" class="text-white hover:text-blue-400">Western</a>
+            <a href="#anime" class="text-white hover:text-blue-400">Anime</a>
+            <a href="#mylist" class="text-white hover:text-blue-400">My List</a>
+        </div>
     </header>
 
-    <div class="container">
-        <main>
-            <section id="series" class="content">
-                <h1>SERIES</h1>
-                <div class="grid">
-                    <div class="card large">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/breaking bad-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/breaking bad.jpg">
-                            <img src="assets/img/breaking bad.jpg" alt="assets/img/breaking bad-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">Breaking Bad (menceritakan kisah Walter White, seorang pria paruh baya yang merubah jalan hidupnya menjadi seorang produsen obat-obatan terlarang setelah ia didiagnosis menderita kanker paru-paru.)</div>
-                    </div>
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/theboys-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/theboys.jpg">
-                            <img src="assets/img/theboys.jpg" alt="assets/img/theboys-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">The Boys</div>
-                    </div>
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/got-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/GoT.jpg">
-                            <img src="assets/img/GoT.jpg" alt="assets/img/got-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">Game of Thrones</div>
-                    </div>
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/op-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/op.jpg">
-                            <img src="assets/img/op.jpg" alt="assets/img/op-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">One Piece</div>
-                    </div>
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/peaky-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/peaky.jpg">
-                            <img src="assets/img/peaky.jpg" alt="assets/img/peaky-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">Peaky Blinders</div>
-                    </div>
+    <main class="flex-1 p-5">
+        <h1 class="text-2xl font-bold text-gray-900 mb-5">Western</h1>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition hover:scale-105">
+                <img src="assets/img/breaking bad.jpg" alt="image" class="w-full h-40 object-cover">
+                <div class="p-3">
+                    <h3 class="text-lg font-semibold">Breaking Bad></h3>
+                    <p class="text-sm text-gray-600">Bercerita tentang guru kimia di sebuah SMA yang beralif profesi jadi produsen narkoba</p>
                 </div>
-            </section>
-            <section id="film" class="content">
-                <h1>FILM</h1>
-                <div class="grid">
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/instastellar-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/instastellar.jpg">
-                            <img src="assets/img/instastellar.jpg" alt="assets/img/instastellar-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">Interstellar</div>
-                    </div>
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/tlotr-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/tlotr.jpg">
-                            <img src="assets/img/tlotr.jpg" alt="assets/img/tlotr-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">The Lord of The Rings</div>
-                    </div>
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/avatar-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/avatar.jpg">
-                            <img src="assets/img/avatar.jpg" alt="assets/img/avatar-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">Avatar</div>
-                    </div>
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/kimino-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/kiminonawa.jpg">
-                            <img src="assets/img/kiminonawa.jpg" alt="assets/img/kimino-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">Kimi No Nawa (Your Name)</div>
-                    </div>
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/toy-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/toy.jpg">
-                            <img src="assets/img/toy.jpg" alt="assets/img/toy-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">Toy Story</div>
-                    </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition hover:scale-105">
+                <img src="assets/img/instastellar.jpg" alt="image" class="w-full h-40 object-cover">
+                <div class="p-3">
+                    <h3 class="text-lg font-semibold">Interstellar></h3>
+                    <p class="text-sm text-gray-600">Sebuah tim penjelajah antar galaksi harus melewati lubang cacing dan terjebak di dimensi waktu ruang angkasa dalam upaya untuk menjamin kelangsungan hidup manusia</p>
                 </div>
-            </section>
-            <section id="mylist" class="content">
-                <h1>MY LIST</h1>
-                <div class="grid">
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/op-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/op.jpg">
-                            <img src="assets/img/op.jpg" alt="assets/img/op-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">One Piece</div>
-                    </div>
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/mcu-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/mcu.jpg">
-                            <img src="assets/img/mcu.jpg" alt="assets/img/mcu-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">Avenger</div>
-                    </div>
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/gintama-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/gintama.jpg">
-                            <img src="assets/img/gintama.jpg" alt="assets/img/gintama-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">Gintama</div>
-                    </div>
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/breaking bad-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/breking bad.jpg">
-                            <img src="assets/img/breaking bad.jpg" alt="assets/img/breaking bad-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">Breaking Bad</div>
-                    </div>
-                    <div class="card">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="assets/img/peaky-mobile.jpg">
-                            <source media="(min-width: 769px)" srcset="assets/img/peaky.jpg">
-                            <img src="assets/img/peaky.jpg" alt="assets/img/peaky-mobile.jpg">
-                        </picture>  
-                        <div class="title-overlay">Peaky Blinders</div>
-                    </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition hover:scale-105">
+                <img src="assets/img/avatar.jpg" alt="image" class="w-full h-40 object-cover">
+                <div class="p-3">
+                    <h3 class="text-lg font-semibold">AVATAR></h3>
+                    <p class="text-sm text-gray-600">Avatar mengisahkan Jake Sully, mantan marinir yang menyusup ke suku Na'vi di planet Pandora untuk misi kolonisasi, namun akhirnya memilih membela mereka saat konflik terjadi.</p>
                 </div>
-            </section>
-        </main>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition hover:scale-105">
+                <img src="assets/img/theboys.jpg" alt="image" class="w-full h-40 object-cover">
+                <div class="p-3">
+                    <h3 class="text-lg font-semibold">The Boys></h3>
+                    <p class="text-sm text-gray-600">The Boys bercerita tentang sekelompok orang yang melawan para superhero korup untuk mengungkap kebenaran di balik citra pahlawan mereka.</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
         <aside class="sidebar">
             <h2 class="animasi">Filter</h2>
