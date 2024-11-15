@@ -1,12 +1,9 @@
-# HOLA A TODOS 
-## KAPILEM
-KAPILEM adalah sebuah website katalog series dan film sederhana yang dibuat menggunakan HTML dan CSS.
+# KAPILEM
+KAPILEM is a simple series and movie catalog website created using HTML and CSS.
 
 ### Link Website
-[KAPILEM](https://revou-fsse-oct24.github.io/module-2-andikazulprisa/)
-
-### Screenshot Website 
-![Screenshot](/assets/img/ss1.png)
+You can visit the KAPILEM site by clicking the following link.
+[KAPILEM](https://kapilem.site/)
 
 ## Fitur
 - **Navigasi**: Navbar dengan tautan ke bagian Series, Film, dan My List. Dilengkapi kolom pencarian yang membantu pengguna mencari konten.
@@ -129,6 +126,33 @@ saya juga menambahkan javacript pada hamburger button tapi **BELUM BISA BERJALAN
 Im still working on it :D
 ---
 ____
+
+# DEPLOYMENT TO NETLIFY
+## Here is how to deploy the website I created to Netlify and Niagahoster.
+1. First, we go to the Netlify website and link the GitHub account.
+![gambar1](/assets/img/1.png)
+
+2. Then select which repository i want to deploy.
+![gambar2](/assets/img/2.png)
+
+3. Now, go to the Niagahoster website and log in with the email associated with my GitHub, then choose the domain i want, and proceed with the payment.
+![gambar34](/assets/img/3.png)
+![gambar34](/assets/img/4.png)
+
+4. After the payment is completed, wait for a while for the registration process.
+![gambar5](/assets/img/5.png)
+
+5. Once the registration is complete, now set up the Netlify DNS for the domain by copying the nameservers provided by Netlify and transferring them to the nameservers in Niagahoster.
+![gambar67](/assets/img/6.png)
+![gambar67](/assets/img/7.png)
+
+6. Wait for about 1 hour until your website gets the domain. Once it's finished, the website link will be accessible through Netlify.
+![gambar8](/assets/img/8.png)
+
+## That’s how I deploy my website using Netlify and purchase a domain from Niagahoster.
+##### *Note : "I use my own repository first to deploy it to Netlify, and once it's done, I will clone the original repository.
+---
+___
 
 ## SEKIAN DAN TERIMA KASIH
 #### ANDIKA ZULPRISA ADHA
